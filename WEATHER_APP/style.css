@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #212121;
+}
+
+#main_card {
+  width: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+/* =================== Left Side =================== */
+#left_Card {
+  width: 425px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: self-start;
+  padding: 30px 20px;
+  background-color: #6098c6;
+  border: 2px solid black;
+  border-radius: 30px;
+}
+
+#searchBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#searchBox input {
+  border: 1px solid #000000;
+  outline: 0;
+  background-color: #dbdbdb;
+  color: black;
+  padding: 10px 25px;
+  height: 50px;
+  border-radius: 20px;
+  margin-right: 7px;
+  font-size: 19px;
+  flex: 1;
+}
+
+#searchBox button {
+  border: 1px solid #7a7474;
+  outline: 0;
+  background-color: #e8e6e6;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+}
+#weather {
+  padding: 0px 30px;
+  font-size: 1.3em;
+}
+
+/* =================== right Side =================== */
+#right_Card {
+  width: 225px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #222831;
+  color: #fff;
+  border: 2px solid black;
+  border-radius: 30px;
+}
+
+.col {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  font-size: 20px;
+  width: 190px;
+}
+#icons img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    margin-right: 10px;
+  }
+
+
+#humidity,
+#wind {
+  font-size: 20px;
+  margin-top: -6px;
+}
+
+/* ===================== display transition ===================== */
+#weather,
+#right_Card {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+#weather.show,
+#right_Card.show {
+  opacity: 1;
+  height: auto;
+}
